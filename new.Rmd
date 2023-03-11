@@ -1,0 +1,64 @@
+---
+title: "Untitled"
+author: "gd"
+date: "2023-03-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## IMPORT DATA
+
+```{r}
+library(readr)
+Interbank_FX_Rates_Historical <- read_csv("datasets/Interbank FX Rates Historical.csv")
+head(Interbank_FX_Rates_Historical)
+```
+
+```{r}
+df=read.csv("./datasets/Interbank FX Rates Historical.csv")
+```
+
+```{r}
+summary(df)
+```
+
+```{r}
+skimr::skim(df)
+```
+
+```{r}
+data(mpg)
+
+```
+
+```{r}
+
+```
+
+```{r}
+library(ggplot2)
+ggplot(mpg,aes(x=displ,y=hwy,colour = class))+
+  geom_point()
+```
+
+```{r}
+ggplot(mpg,aes(x=trans,colour=fl))+geom_bar()
+```
+
+```{r}
+str(mpg)
+```
+
+```{r}
+library(tidyverse)
+mpg1 <- mpg%>%
+      filter(manufacturer > 123)
+```
+
+```{r}
+dim(mpg)
+dim(mpg1)
+```
